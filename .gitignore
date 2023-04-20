@@ -40,12 +40,6 @@ venv/
 # VSCode
 .vscode/
 
-# Docker
-.dockerignore
-Dockerfile
-docker-compose.yml
-.docker/
-*.dockerfile
 
 # macOS
 .DS_Store
