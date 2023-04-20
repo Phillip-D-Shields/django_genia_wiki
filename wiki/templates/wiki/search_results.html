@@ -1,0 +1,16 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+  <div class="container">
+    <h4>Search Results</h4>
+    <ul class="collection">
+      {% for result in results %}
+        <li class="collection-item">
+          <a href="{% url 'wiki:product' result.object.id %}">{{ result.object.name }}</a>
+        </li>
+      {% empty %}
+        <li class="collection-item">No results found.</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="{% static 'materialize.min.css' %}" media="screen,projection"/>
+    {% block title %} <title>Genia Playbook</title> {% endblock %}
+    <!--Let browser know website is optimized for mobile-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<header class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper green darken-4">
+            <div class="container">
+                <a href="{% url 'wiki:products_all' %}" class="brand-logo">Genia Playbook</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{% url 'wiki:products_of_category' 1 %}">Architectural</a></li>
+                    <li><a href="{% url 'wiki:products_of_category' 3 %}">Componentry</a></li>
+                    <li><a href="{% url 'wiki:products_of_category' 2 %}">Outdoors</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<ul class="sidenav" id="mobile-demo">
+    <div class="section">
+        <li><a href="{% url 'wiki:products_of_category' 1 %}">Architectural</a></li>
+        <li><a href="{% url 'wiki:products_of_category' 3 %}">Componentry</a></li>
+        <li><a href="{% url 'wiki:products_of_category' 2 %}">Outdoors</a></li>
+    </div>
+</ul>
+
+<div class="container">
+    <div class="section">
+        <form action="{% url 'wiki:search' %}" method="GET">
+            <div class="input-field">
+                <i class="material-icons prefix">search</i>
+                <input id="search" type="search" name="q" placeholder="search">
+            </div>
+        </form>
+    </div>
+</div>
+<div class="section">
+    {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+</div>
+
+<!--JavaScript at end of body for optimized loading-->
+<script type="text/javascript" src="{% static 'materialize.min.js' %}"></script>
+<!--Javascript for sidenav-->
+<script type="text/javascript" src="{% static 'index.js' %}"></script>
+</body>
+</html>

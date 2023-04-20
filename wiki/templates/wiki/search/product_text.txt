@@ -1,0 +1,5 @@
+{{ object.id }}
+{{ object.name }}
+{{ object.description }}
+{% for tag in object.tags.all %}{{ tag }}{% endfor %}
+# add fields we want included in search index

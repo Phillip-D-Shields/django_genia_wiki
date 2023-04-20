@@ -1,0 +1,29 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block extrahead %}
+<style>
+#site-name {
+    font-size: 2.25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#site-name img {
+    border-radius: .25rem;
+    margin-right: 1rem;
+    overflow: hidden;
+}
+</style>
+{% endblock %}
+{% block extrastyle %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+{% endblock %}
+
+{% block branding %}
+    <a href="{% url 'admin:index' %}" id="site-name" >
+        <img src="https://media.licdn.com/dms/image/C560BAQFb-cdwDcyeug/company-logo_200_200/0/1625432376699?e=1689811200&v=beta&t=StTok4po6XeNrox96jypovqOTPhuqImx0K3UUFhq-xI" alt="Genia Playbook" style="max-height: 50px;"/>
+        Genia Playbook
+    </a>
+{% endblock %}

@@ -1,0 +1,58 @@
+# Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc.so
+*.egg-info/
+dist/
+*.egg
+*.sdist
+*.wheel
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.pyo
+*.mo
+*.sqlite3
+db.sqlite3
+local_settings.py
+
+# Environment files
+.env
+.env.local
+.env.dev
+.env.prod
+
+# Virtual environment
+venv/
+.virtualenv/
+*.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# Docker
+.dockerignore
+Dockerfile
+docker-compose.yml
+.docker/
+*.dockerfile
+
+# macOS
+.DS_Store
+
+# Miscellaneous
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
