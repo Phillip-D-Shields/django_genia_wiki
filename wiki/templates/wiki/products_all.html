@@ -16,7 +16,7 @@
                 {% if product.image %}
                 <img src="{{ product.image.url }}" alt="{{ product.name }}">
                 {% else %}
-                <p>No image</p>
+                <img src="https://picsum.photos/250" alt="no product image">
                 {% endif %}
                 <span class="card-title">{{ product.name }}</span>
             </div>

@@ -15,7 +15,7 @@
         {% if product.image %}
         <img src="{{ product.image.url }}" alt="{{ product.name }}" class="col s12 m4 l6">
         {% else %}
-        <p>No image</p>
+        <img src="https://picsum.photos/250" alt="no product image" class="col s12 m4 l6">
         {% endif %}
         <div class="col m8 l6">
             <p>{{ product.description }}</p>
