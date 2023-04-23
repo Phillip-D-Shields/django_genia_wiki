@@ -6,7 +6,7 @@
 
 - Run `docker compose up` from the root to start the server
 
-  > Note: A postgresql db container will be created and started automatically, once this container is ready to accept connections, the django server will start. This can take a few seconds.
+  > Note: A postgresql db container will be created and started automatically, once this container is ready to accept connections, the django server will start. This can take a few seconds. If you try to access the localhost via a browser before the server container has finished setup, the server container will stop and need to be restarted.
 
 - Once everything is connected and operating, run the command `python manage.py rebuild_index` to create the search index.
 
@@ -25,7 +25,7 @@
 3. `Componentry` displays all componentry products.
 4. `Outdoors` displays all outdoor products.
 
-- The search bar can be used to search for products by name and keywords. The search index can easily be modified and updated using the haystack library.
+- The search bar can be used to search for products by name and keywords. The search index can easily be modified and updated using the haystack library. the search index needs to be rebuilt after new products are added or existing products are updated to include new info. `python manage.py rebuild_index` will rebuild the search index.
 
 #### Admin UI
 
